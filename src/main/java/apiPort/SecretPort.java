@@ -14,7 +14,7 @@ import java.util.Map;
 public interface SecretPort {
 
     /**
-     * @param secret 手机号
+     * @param secret 给网站的授权
      * @return 返回登录用户的所有权限(应用)信息
      *          qq\alipay。。。
      */
