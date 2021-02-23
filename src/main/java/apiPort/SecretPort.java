@@ -41,7 +41,7 @@ public interface SecretPort {
      * @param cancelSecret 撤销用户的密钥
      * @return 用户当前所有的权限，相当于调用 getPermissionInfos
      */
-    @RequestMapping("concelPermission/{cancelSecret}")
+    @RequestMapping("concelPermission/{secret}/{cancelSecret}")
     public Map<String,Object> concelPermission();
 
     /**
