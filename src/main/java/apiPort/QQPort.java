@@ -29,7 +29,7 @@ public interface QQPort {
      * @param secret 给网站的授权
      * @return 返回用户登录信息
      */
-    @RequestMapping("getLoginInfo/{secret}")
+    @RequestMapping("getUserInfo/{secret}")
     public Map<String,Object> getLoginInfo();
 
     /**

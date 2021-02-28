@@ -46,7 +46,7 @@ public interface SecretPort {
 
     /**
      * @param secret 给网站的授权
-     * @param permission 用户申请的权限 QQ、Alipay。。。
+     * @param permission 用户申请的权限 qq、Alipay中一个
      * @param ip  用户的ip白名单--有的话是30天有效期，没有的话是1天有效期
      * @return 用户当前所有的权限，相当于调用 getPermissionInfos
      */
