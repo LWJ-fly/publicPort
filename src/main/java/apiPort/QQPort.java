@@ -3,6 +3,7 @@ package apiPort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Map;
 
@@ -37,4 +38,12 @@ public interface QQPort {
     @RequestMapping("exit")
     public Map<String,Object> exit();
 
+    /**
+     * 使用发出去的密钥，以及code换取用户信息
+     * @param secret 分发出去的密钥
+     * @param code 用户登录时QQ官网发出的登录令牌
+     * @return 以Json串的形式返回用户的简略信息
+     */
+    @RequestMapping("/changeUserInfo/{secret}/{code}")
+    public Map<String, Object> changeUserInfoBySecret(@PathVariable("secret") String secret,@PathVariable("code") String code);
 }

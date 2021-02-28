@@ -24,7 +24,7 @@ public interface AlipayPort {
      * @param goodsType 商品主类型，取值如下：0：虚拟类商品；1：实物类商品。
      * @return 获取手机支付表单
      */
-    @RequestMapping("createAppForm/{secret}/{tradeNo}/{subject}/{tradeInfo}/{timeOut}/{totalAmount}/{goodsType}")
+    @RequestMapping("createAppForm/{secret}/{quitUrl}/{tradeNo}/{subject}/{tradeInfo}/{timeOut}/{totalAmount}/{goodsType}")
     public Map<String,Object> getPermissionInfos();
 
 
@@ -38,7 +38,7 @@ public interface AlipayPort {
      * @param goodsType 商品主类型，取值如下：0：虚拟类商品；1：实物类商品。
      * @return 获取网站支付表单
      */
-    @RequestMapping("createWebForm/{secret}/{tradeNo}/{subject}/{tradeInfo}/{timeOut}/{totalAmount}/{goodsType}")
+    @RequestMapping("createWebForm/{secret}/{quitUrl}/{tradeNo}/{subject}/{tradeInfo}/{timeOut}/{totalAmount}/{goodsType}")
     public String createWebForm();
 
 
