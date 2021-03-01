@@ -52,4 +52,12 @@ public interface SecretPort {
      */
     @RequestMapping("applyPermission/{secret}/{permission}/{ip}")
     public Map<String,Object> applyPermissionAndIp();
+
+    /**
+     * @param secret 给网站的授权
+     * @param permission 用户申请的权限————有效期1天
+     * @return 用户当前所有的权限，相当于调用 getPermissionInfos
+     */
+    @RequestMapping("applyPermission/{secret}/{permission}")
+    public Map<String,Object> applyPermission();
 }
