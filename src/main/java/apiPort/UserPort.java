@@ -33,4 +33,14 @@ public interface UserPort {
     @RequestMapping("setEmailOrPhone2BaseInfo/{secret}/{email}/{phone}")
     public Map<String,Object> setEmailOrPhone2BaseInfo();
 
+
+    /**
+     * 发送意见邮件
+     * @param title 发送的标题
+     * @param content 发送的内容
+     * @return 返回发送状态
+     */
+    @RequestMapping("sendEmail/{title}/{content}")
+    public Map<String,Object> sendEmail(String title , String content);
+
 }
