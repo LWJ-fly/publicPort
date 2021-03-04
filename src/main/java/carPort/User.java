@@ -43,43 +43,72 @@ public interface User {
      * 设置用户信息
      * 没有可为 null
      *      例如：updateUserInfo/null/null/null/212***121
+     * @return 返回更新后的用户信息
      */
     @RequestMapping("updateUserInfo/{phone}/{email}/{WeChat}/{QQNum}")
     public Map<String,Object> updateUserInfo();
 
 
     /**
-     * 查询所有的拼车信息，只返回条数后台进行设置
+     * 查询所有的拼车信息，只返回条数后台进行设置————不需要登录
      * @return
      */
     @RequestMapping("findAllCarPooling")
     public Map<String,Object> findAllCarPooling();
 
     /**
-     * 通过出发地搜索拼车信息
+     * 通过出发地搜索拼车信息————不需要登录
+     *                                  【精确查询】
      * @return
      */
     @RequestMapping("findCarPoolingByOrigin/{origin}")
     public Map<String,Object> findCarPoolingByOrigin();
 
     /**
-     * 通过目的地搜索拼车信息
+     * 通过出发地搜索拼车信息————不需要登录
+     *                                  【模糊查询】
+     * @return
+     */
+    @RequestMapping("findCarPoolingByLikeOrigin/{origin}")
+    public Map<String,Object> findCarPoolingByLikeOrigin();
+
+    /**
+     * 通过目的地搜索拼车信息————不需要登录
+     *                                  【精确查询】
      * @return
      */
     @RequestMapping("findCarPoolingByBourn/{bourn}")
     public Map<String,Object> findCarPoolingByBourn();
 
     /**
-     * 通过出发地和目的地搜索拼车信息
+     * 通过目的地搜索拼车信息————不需要登录
+     *                                  【模糊查询】
+     * @return
+     */
+    @RequestMapping("findCarPoolingByLikeBourn/{bourn}")
+    public Map<String,Object> findCarPoolingByLikeBourn();
+
+    /**
+     * 通过出发地和目的地搜索拼车信息————不需要登录
+     *                                  【精确查询】
      * @return
      */
     @RequestMapping("findCarPoolingByTrip/{origin}/{bourn}")
     public Map<String,Object> findCarPoolingByTrip();
 
 
+    /**
+     * 通过出发地和目的地搜索拼车信息————不需要登录
+     *                                  【模糊查询】
+     * @return
+     */
+    @RequestMapping("findCarPoolingByLikeTrip/{origin}/{bourn}")
+    public Map<String,Object> findCarPoolingByLikeTrip();
+
+
 
     /**
-     * 发起拼车 填写发起拼车信息
+     * 发起拼车 填写发起拼车信息            需要登录
      * @param origin 出发地
      * @param bourn 目的地
      * @param readyTime 最早出发时间
