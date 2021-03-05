@@ -147,6 +147,13 @@ public interface User {
     @RequestMapping("findMyCarPooling")
     public Map<String,Object> findMyCarPooling();
 
+    /**
+     * 查看我的全部的拼车信息
+     * @return
+     */
+    @RequestMapping("findMyAllCarPooling")
+    public Map<String,Object> findMyAllCarPooling();
+
 
     /**
      * 查看详细拼车信息
