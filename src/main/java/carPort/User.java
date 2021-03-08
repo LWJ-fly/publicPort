@@ -182,6 +182,18 @@ public interface User {
     public Map<String,Object> quitCarPooling(String carId);
 
 
+    /**
+     * 发起请出的功能还没有写
+     * 邮箱进行通知，点击后做标记，决定是否踢出
+     */
+
+
+
+
+    /**
+     * 司机模块还没完善
+     *    司机单独加一张表，之前的思路可以找一下
+     */
 
 
 
