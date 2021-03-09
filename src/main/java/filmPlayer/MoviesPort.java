@@ -50,7 +50,7 @@ public interface MoviesPort {
      * 返回：返回所有电影信息（调用findAllMovies()）
      */
     @RequestMapping("deleteMovie/{movieId}")
-    public Map<String,Object> getrUserInfo(int movieId);
+    public Map<String,Object> deleteMovie(int movieId);
 
     /**
      *电影评论数增加

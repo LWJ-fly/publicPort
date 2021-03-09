@@ -7,3 +7,4 @@ class Movies{}
 class Comments{}
 
 class SpellGroup {}
+class Discussionitem {}

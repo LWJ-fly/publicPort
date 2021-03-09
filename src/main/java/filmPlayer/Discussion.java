@@ -68,13 +68,13 @@ public interface Discussion {
 
     /**
      *增加某一个讨论贴的回复 (唯一键itemId)后台生成
-     * 参数：discussionId: 讨论贴id
+     * 参数：discussionId: 讨论贴id  【【【不需要，中包含的有】】】
      *     discussionInfo: discussionInfo对象/或者采用你那种每个字段都拼在地址后面那种
      *
      * 返回：返回此id讨论贴的所有回复（调用getDiscussionInfo(discussionId)，同时调用评论增加addDiscussionCount(dissionId)）
      */
-    @RequestMapping("addDiscussionInfo/{discussionId}/{discussionInfo}")
-    public Map<String,Object> addDiscussionInfo(int discussionId ,String discussionInfo);
+    @RequestMapping("addDiscussionInfo/{discussionitem}")
+    public Map<String,Object> addDiscussionInfo(Discussionitem discussionitem);
 
 
 
