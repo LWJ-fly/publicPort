@@ -28,7 +28,7 @@ public interface Discussion {
 
 
 
-    /**
+    /**{需要登陆}
      *增加讨论帖 （唯一键dissionId）后台生成
      * 参数：dission:讨论贴对象/或者采用你那种每个字段都拼在地址后面那种
      *
@@ -66,7 +66,7 @@ public interface Discussion {
 
 
 
-    /**
+    /**{需要登陆}
      *增加某一个讨论贴的回复 (唯一键itemId)后台生成
      * 参数：discussionId: 讨论贴id  【【【不需要，中包含的有】】】
      *     discussionInfo: discussionInfo对象/或者采用你那种每个字段都拼在地址后面那种
