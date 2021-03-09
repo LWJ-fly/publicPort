@@ -1,5 +1,6 @@
 package carPort;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -121,9 +122,10 @@ public interface User {
      * @param phoneNum  手机号——为空则为null
      * @param email 拼车结果通知邮箱——为空则为null
      * @return 返回拼车状态
+     * https://wenmeng.online/carPooling/createCarPooling/11/22/123456789/123456987/6/5/77/88/99/00/123123456.com
      */
-    @RequestMapping("createCarPooling/{origin}/{bourn}/{readyTime}/{GoTime}/{totalNum}/{getNum}/{inCarMsg}/{QQNum}/{WXNum}/{phoneNum}/{email}")
-    public Map<String,Object> createCarPooling(String origin,String bourn,String readyTime,String GoTime,String totalNum,String getNum,String inCarMsg,String QQNum,String WXNum,String phoneNum,String email);
+    @RequestMapping("createCarPooling/{origin}/{bourn}/{readyTime}/{GoTime}/{totalNum}/{getNum}/{inCarMsg}/{QQNum}/{WXNum}/{email}/{phoneNum}")
+    public Map<String,Object> createCarPooling(@PathVariable("origin") String origin, @PathVariable("bourn") String bourn, @PathVariable("readyTime") String readyTime, @PathVariable("GoTime") String GoTime, @PathVariable("totalNum") String totalNum, @PathVariable("getNum") String getNum, @PathVariable("inCarMsg") String inCarMsg, @PathVariable("QQNum") String QQNum, @PathVariable("WXNum") String WXNum, @PathVariable("phoneNum") String phoneNum, @PathVariable("email") String email);
 
 
 
