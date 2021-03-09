@@ -14,14 +14,14 @@ public interface UserPort {
     @RequestMapping("login/{code}")
     public Map<String,Object> login(String code);
 
-    /**
+    /**{需要登陆}
      * 退出登录
      * @return
      */
     @RequestMapping("exit")
     public Map<String,Object> exit();
 
-    /**
+    /**{需要登陆}
      * 查询个人信息
      * 参数：userId:用户的id
      *
@@ -30,7 +30,7 @@ public interface UserPort {
     @RequestMapping("getUserInfo/{userId}")
     public Map<String,Object> getUserInfo(int userId);
 
-    /**
+    /**{需要登陆}
      * 修改个人信息
      * 参数：gender:性别
      *       qq:
