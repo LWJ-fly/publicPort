@@ -83,11 +83,11 @@ public interface Discussion {
     /**
      *删除某一个讨论贴的回复
      * 参数：dissionId:讨论贴id
-     *     discussionId: 讨论贴中某个回复的id
+     *     discussionId: 讨论贴中某个回复的id【【【【只用给我讨论帖的id 即可，后续的我都能获取到】】】】
      *
      * 返回：返回此id讨论贴的所有回复（调用getDiscussionInfo(dissionId)）
      */
-    @RequestMapping("deleteDiscussionInfo/{dissionId}/{discussionId}")
+    @RequestMapping("deleteDiscussionInfo/{discussionitemId}")
     public Map<String,Object> deleteDiscussionInfo(int dissionId ,int discussionId);
 
 
