@@ -16,7 +16,7 @@ public interface SpellGroupPort {
     public Map<String,Object> getSpellGroup();
 
 
-    /**
+    /**{需要登陆}
      *增加团约 (唯一键spellGroupsId)后台生成
      * 参数：spellGroups:spellGroups对象/或者采用你那种每个字段都拼在地址后面那种
      *
@@ -43,7 +43,7 @@ public interface SpellGroupPort {
     @RequestMapping("getSpellGroupInfo/{spellGroupId}")
     public Map<String,Object> getSpellGroupInfo(int spellGroupId);
 
-    /**
+    /**{需要登陆}
      *申请加入团约
      * 参数：spellGroupId:团约id
      *     userId:用户id
