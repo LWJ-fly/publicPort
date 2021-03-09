@@ -52,7 +52,7 @@ public interface MoviesPort {
     @RequestMapping("deleteMovie/{movieId}")
     public Map<String,Object> deleteMovie(int movieId);
 
-    /**
+    /**{需要登陆}
      *电影评论数增加
      * 参数：movieId: 电影id
      *
@@ -72,7 +72,7 @@ public interface MoviesPort {
     public Map<String,Object> getMovieComment(int movieId);
 
 
-    /**
+    /**{需要登陆}
      *创建电影评论
      * 参数：movieId: 电影id（用于返回时查询电影评论的参数）
      *     comments: comments对象/或者采用你那种每个字段都拼在地址后面那种
@@ -84,7 +84,7 @@ public interface MoviesPort {
 
 
 
-    /**
+    /**{需要登陆}
      *修改评论点赞数量
      * 参数：commentsId:评论自身的id（唯一键那个，用来找到这个评论）
      *     stars:点赞个数
