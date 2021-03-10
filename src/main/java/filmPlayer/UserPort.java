@@ -31,6 +31,14 @@ public interface UserPort {
     public Map<String,Object> getUserInfo(int userId);
 
     /**{需要登陆}
+     * 查询个人信息 查询个人信息，服务器保存着用户的登录信息，可以直接获取
+     *
+     * 返回：此用户的所有信息
+     */
+    @RequestMapping("getUserInfo")
+    public Map<String,Object> getUserInfo();
+
+    /**{需要登陆}
      * 修改个人信息
      * 参数：gender:性别
      *       qq:

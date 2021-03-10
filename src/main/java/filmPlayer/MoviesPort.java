@@ -75,12 +75,12 @@ public interface MoviesPort {
     /**{需要登陆}
      *创建电影评论
      * 参数：movieId: 电影id（用于返回时查询电影评论的参数）
-     *     comments: comments对象/或者采用你那种每个字段都拼在地址后面那种
+     *     comments: comments对象/或者采用你那种每个字段都拼在地址后面那种【【【只需要一个参数就行，这里包含上面参数】】】
      *
      * 返回：当前电影所有评论（调用getMovieComment(movieId)，同时调用评论数增加的方法addMovieCommentCount(movieId)）
      */
-    @RequestMapping("addMovieComment/{movieId}/{comments}")
-    public Map<String,Object> addMovieComment(int movieId,Comments comments);
+    @RequestMapping("addMovieComment/{comments}")
+    public Map<String,Object> addMovieComment(Comments comments);
 
 
 
@@ -93,8 +93,8 @@ public interface MoviesPort {
      *
      * 返回：不用返回任何东西
      */
-    @RequestMapping("addStars/{commentsId}/{stars}")
-    public Map<String,Object> addStars(int commentsId,int stars);
+    @RequestMapping("setStars/{commentsId}/{stars}")
+    public Map<String,Object> setStars(int commentsId,int stars);
 
 
 

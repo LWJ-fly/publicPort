@@ -46,12 +46,12 @@ public interface SpellGroupPort {
     /**{需要登陆}
      *申请加入团约
      * 参数：spellGroupId:团约id
-     *     userId:用户id
+     *     userId:用户id 【【【【【【不需要，后端保存的有，能自动获取】】】】】】】】】
      *
      * 返回：此id下团约的所有信息（调用getSpellGroupInfo(spellGroupId)）
      */
-    @RequestMapping("addSpellGroupInfo/{discussionId}/{useId}")
-    public Map<String,Object> addSpellGroupInfo(int discussionId ,int useId);
+    @RequestMapping("addSpellGroupInfo/{discussionId}")
+    public Map<String,Object> addSpellGroupInfo(int discussionId );
 
 
 
