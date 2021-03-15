@@ -25,8 +25,8 @@ public interface CarFriendController {
      * @param carId 此次拼车的ID
      * @return 返回
      */
-    @RequestMapping("letOut/{carId}/{outId}")
-    public Map<String,Object> letOut(int carId,int outId);
+    @RequestMapping("letOut/{carId}/{outId}/{leavecause}")
+    public Map<String,Object> letOut(int carId,int outId,String leavecause);
 
     /**
      * 获取发起请出的信息
