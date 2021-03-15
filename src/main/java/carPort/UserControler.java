@@ -32,6 +32,14 @@ public interface UserControler {
     public Map<String,Object> login(HttpSession session, @PathVariable("code") String code) ;
 
     /**
+     * 获取用户信息，判断用户是否有队友发出请求踢出同伴信息
+     * 如果有返回为sucess，需要登录调用
+     */
+    @RequestMapping("/getMessage")
+    public Map<String,Object> getMessage();
+
+
+    /**
      * 获取登录基本信息，头像，昵称，性别，openID
      * @param session
      * @return
