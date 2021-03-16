@@ -20,7 +20,7 @@ import java.util.Map;
 public interface CarFriendController {
 
     /**
-     * 发起请出队友，请出队友的ID
+     * 发起请出队友，请出队友的ID  请出其他人，两个人的话不允许请出他人，建议自己退出
      * @param outId 被请出去人的ID
      * @param carId 此次拼车的ID
      * @return 返回
@@ -44,6 +44,16 @@ public interface CarFriendController {
      */
     @RequestMapping("getCallOutDec/{callleaveid}")
     public Map<String,Object> getCallOutDec(int callleaveid);
+
+    /**
+     * 处理拼车信息
+     *      队友同意 、 拒绝 请出其他人，两个人的话不允许请出他人，建议自己退出
+     * @param callleaveid 请出他人表中的ID
+     * @param deal 处理结果，true/false
+     * @return
+     */
+    @RequestMapping("dealCallOut/{callleaveid}/{deal}")
+    public Map<String,Object> dealCallOut(int callleaveid,Boolean deal);
 
     /**
      * 查询所有的拼车信息，只返回条数后台进行设置
