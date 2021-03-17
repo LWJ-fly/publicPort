@@ -1,5 +1,7 @@
 package carPort;
 
+import Nouse.Drivercar;
+import Nouse.Drivervie;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,12 +21,17 @@ public interface DriverVieController {
             一个查看申请载客信息
             一个用户拒绝载客信息
             一个用户同意载客信息
+            //根据此订单查询所有的拼车信息
     退出载客申请
  */
 
     @RequestMapping("upDateDriverCar")
     public Map<String,Object> upDateDriverCar(HttpSession session, Drivercar drivercar);
-
+    /**
+     * 获取拼车司机的拼车信息
+     */
+    @RequestMapping("getDriverCar")
+    public Map<String,Object> getDriverCar(HttpSession session);
 
     /**
      * 【用户使用】 查看当前拼车信息的中，司机抢单信息
@@ -52,11 +59,11 @@ public interface DriverVieController {
     /**
      * 司机申请载客的方法
      * @param session 系统自动获取
-     * @param poolingcarid 申请载客的拼车ID，拼车的ID
+     * @param drivervie 申请载客的拼车ID，拼车的ID,司机的报价，抢单的留言，这三个，载客ID必须，另外不必
      * @return 返回申请数据
      */
     @RequestMapping("applyPull/{poolingcarid}")
-    public Map<String,Object> applyPull(HttpSession session,Integer poolingcarid);
+    public Map<String,Object> applyPull(HttpSession session, Drivervie drivervie );
 
     /**
      * @param session 系统自动获取
