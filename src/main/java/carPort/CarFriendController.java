@@ -63,6 +63,13 @@ public interface CarFriendController {
     public Map<String,Object> findAllCarFriend();
 
     /**
+     * 查询所有的拼车完成的拼车信息，只返回条数后台进行设置
+     * @return
+     */
+    @RequestMapping("findAllOkCarFriend")
+    public Map<String,Object> findAllOkCarFriend();
+
+    /**
      * 通过出发地搜索拼车信息————精确查询
      * @return
      */
