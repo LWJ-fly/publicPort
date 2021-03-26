@@ -75,19 +75,19 @@ public interface DriverVieController {
 
 
     /**
-     * 查询所有的拉取信息
+     * 查询所有的拉客信息，申请的都显示
      * @param session
      * @return
      */
-    @RequestMapping("findAllPull/{vieid}")
+    @RequestMapping("findAllPull")
     public Map<String,Object> findAllPull(HttpSession session);
 
     /**
-     * 当前申请的载客信息
+     * 当前申请的载客信息，现在申请的所有订单
      * @param session
      * @return
      */
-    @RequestMapping("findApplyPull/{vieid}")
+    @RequestMapping("findApplyPull")
     public Map<String,Object> findApplyPull(HttpSession session);
 
 
