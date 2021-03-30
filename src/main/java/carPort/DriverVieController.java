@@ -59,10 +59,10 @@ public interface DriverVieController {
     /**
      * 司机申请载客的方法
      * @param session 系统自动获取
-     * @param drivervie 申请载客的拼车ID，拼车的ID,司机的报价，抢单的留言，这三个，载客ID必须，另外不必
+     * @param drivervie 申请载客的，拼车的ID,司机的报价，抢单的留言，这三个，载客ID必须，另外不必
      * @return 返回申请数据
      */
-    @RequestMapping("applyPull/{poolingcarid}")
+    @RequestMapping("applyPull")
     public Map<String,Object> applyPull(HttpSession session, Drivervie drivervie );
 
     /**
