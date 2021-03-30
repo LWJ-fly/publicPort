@@ -79,7 +79,7 @@ public interface DriverVieController {
      * @param session
      * @return
      */
-    @RequestMapping("findAllPull/{vieid}")
+    @RequestMapping("findAllPull")
     public Map<String,Object> findAllPull(HttpSession session);
 
     /**
@@ -87,7 +87,7 @@ public interface DriverVieController {
      * @param session
      * @return
      */
-    @RequestMapping("findApplyPull/{vieid}")
+    @RequestMapping("findApplyPull")
     public Map<String,Object> findApplyPull(HttpSession session);
 
 
@@ -96,7 +96,7 @@ public interface DriverVieController {
      * @param session
      * @return
      */
-    @RequestMapping("findAgreePull/{vieid}")
+    @RequestMapping("findAgreePull")
     public Map<String,Object> findAgreePull(HttpSession session);
 
 
@@ -105,7 +105,7 @@ public interface DriverVieController {
      * @param session
      * @return
      */
-    @RequestMapping("findFilePull/{vieid}")
+    @RequestMapping("findFilePull")
     public Map<String,Object> findFilePull(HttpSession session);
 
 
